@@ -5,6 +5,34 @@
   text-align: center;
 }
 
+.linkedinLink{
+	color: white;
+	font-family: 'Roboto';
+	font-weight: 300;
+	line-height: 1.1;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: font-weight 1s;
+	transition: font-size 1s;
+
+}
+
+.linkedinLink:hover{
+	font-weight: 400;
+	font-size: larger;
+}
+
+.mailAddress{
+	color: white;
+	font-family: 'Roboto';
+	font-weight: 250;
+	line-height: 1.1;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

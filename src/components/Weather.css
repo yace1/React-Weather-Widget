@@ -5,6 +5,7 @@
 
 .weather- {
 	width: 90%;
+	margin-top: 1rem;
 	white-space: pre-wrap;
     display: inline-block;
     flex-direction: row;
