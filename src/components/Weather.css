@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,100');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css');
+
+/* styling inspiration: https://frontendin.com/css-weather-widget/ */
+
+.weather- {
+	width: 90%;
+	white-space: pre-wrap;
+    display: inline-block;
+    flex-direction: row;
+	flex-wrap: wrap;
+	background-color: rgba(240, 255, 255, 0.064);
+	align-items: top;
+	/* padding: 10rem; */
+	padding: 0;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+	color: white;
+	font-family: 'Roboto';
+	font-weight: 100;
+	line-height: 1.1;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+}
+
+.cityName{
+	width: 90%;
+	margin: 3rem;
+	padding-top: 0rem;
+	margin-bottom: 0rem;
+	margin-top: 2rem;
+	text-align: left;
+	border-bottom: solid thin white;
+	text-transform: uppercase;
+	color: #E8E8E8;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 2.2rem;
+}
+
+.weatherInfo{
+	flex-wrap: wrap;
+	margin-top: 0;
+	padding-top: 0;
+	margin-left: 3rem;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: left;
+}
+
+.temp{
+	padding-left: 2rem;
+	margin-top: 5rem;
+	padding-top: 0px;
+	font-size: 8em;
+	font-weight: 280;
+	line-height: 0.75;
+	
+}
+
+.additionalInfo{
+	padding-left: 3rem;
+	font-size: 1.4em;
+	font-weight: 250;
+	line-height: 1.5;
+}
+
+.cityInput{
+	color: white;
+	background: transparent;
+	width: 90%;
+	border-style: none;
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+	margin-bottom: 2rem;
+	text-align: left;
+	border-top: solid thin white;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: 100;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: rgba(255, 255, 255, 0.643);
+	font-size: 1.4rem;
+	font-weight: 80;
+  }
