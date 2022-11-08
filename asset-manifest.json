@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/React-Weather-Widget/static/css/main.ce7664fb.css",
-    "main.js": "/React-Weather-Widget/static/js/main.78c8f53e.js",
+    "main.js": "/React-Weather-Widget/static/js/main.2d656c67.js",
     "static/js/787.d1fba59b.chunk.js": "/React-Weather-Widget/static/js/787.d1fba59b.chunk.js",
-    "static/media/background.jpg": "/React-Weather-Widget/static/media/background.84ed0607cbf0a4f9d65b.jpg",
     "index.html": "/React-Weather-Widget/index.html",
     "main.ce7664fb.css.map": "/React-Weather-Widget/static/css/main.ce7664fb.css.map",
-    "main.78c8f53e.js.map": "/React-Weather-Widget/static/js/main.78c8f53e.js.map",
+    "main.2d656c67.js.map": "/React-Weather-Widget/static/js/main.2d656c67.js.map",
     "787.d1fba59b.chunk.js.map": "/React-Weather-Widget/static/js/787.d1fba59b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ce7664fb.css",
-    "static/js/main.78c8f53e.js"
+    "static/js/main.2d656c67.js"
   ]
 }
