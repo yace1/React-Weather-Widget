@@ -26,10 +26,13 @@
 }
 
 .cityName{
-	width: 90%;
+	width: 100%; 
+	max-width:90%;
+	overflow: hidden;
 	margin: 3rem;
-	padding-top: 0rem;
 	margin-bottom: 0rem;
+	margin-right: 2rem;
+	margin-left: 4rem;
 	margin-top: 2rem;
 	text-align: left;
 	border-bottom: solid thin white;
@@ -53,6 +56,7 @@
 
 .temp{
 	padding-left: 2rem;
+	max-width: 50%;
 	margin-top: 5rem;
 	padding-top: 0px;
 	font-size: 8em;
@@ -81,10 +85,32 @@
 	text-transform: uppercase;
 	font-size: 1.4rem;
 	font-weight: 100;
+	overflow: hidden;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: rgba(255, 255, 255, 0.643);
 	font-size: 1.4rem;
 	font-weight: 80;
+  }
+
+  @media only screen and (max-width: 800px) {
+	.cityName {
+	  max-width: fit-content;
+	  padding-left: 0rem;
+	  margin-left: 1rem;
+	}
+	.temp{
+		margin-left: 0rem;
+	}
+	.weatherInfo{
+		justify-content: center;
+	}
+	.additionalInfo{
+		padding-left: 3rem;
+		text-align: left;
+	}
+	.cityInput{
+		text-align: center;
+	}
   }
