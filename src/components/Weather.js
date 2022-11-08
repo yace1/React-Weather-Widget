@@ -22,6 +22,7 @@ const Weather = () => {
 	const [cityName, setCityName] = React.useState("");
  	const [weatherData, setWeatherData] = React.useState({});
 
+	 // fetch location by city name
 	async function fetchLocationByCity(city) {
 		fetch(apiLocationUrl(city))
 		.then((response) => {
@@ -40,6 +41,7 @@ const Weather = () => {
 		   });
 	}
 
+	 // fetch city name by location (latitude and longitude)
 	async function FetchCityName(latitude, longitude){
 		const url = "https://api.bigdatacloud.net/data/reverse-geocode?latitude=" + latitude +  "&longitude=" + longitude +"&localityLanguage=en&key=" + bigDataApiKey;
 		fetch(url)
@@ -58,7 +60,8 @@ const Weather = () => {
 		   });
 	}
 
-	async function fetchWeatherData(latitude, longitude) {
+	// fetch weather data by location (latitude and longitude)
+	async function fetchWeatherData(latitude, longitude) { 
 		fetch(apiWeatherUrl(latitude, longitude))
 		.then((response) => {
 			if (!response.ok) {
@@ -75,7 +78,8 @@ const Weather = () => {
 		   });
 	}
 
-	function chooseEmoji(weather){
+	// choose the Icon according to the weather description
+	function chooseIcon(weather){ 
 		switch(weather){
 			case "Clouds":
 				return <WiCloud size={190} color="white" className='weatherIcon'/>;
@@ -95,13 +99,14 @@ const Weather = () => {
 	}
 
 
-	const handleKeyDown = event =>{
+	const handleKeyDown = event =>{ 
 		if (event.key === 'Enter') {
 			fetchLocationByCity(event.target.value);
 		}
 	}
 
-	useEffect(() => {
+	// fetch weather data when the location changes
+	useEffect(() => { 
 		navigator.geolocation.getCurrentPosition(function(position) {
 			setLocation([position.coords.latitude, position.coords.longitude]);
 			fetchWeatherData(position.coords.latitude, position.coords.longitude);
@@ -109,7 +114,7 @@ const Weather = () => {
 		  });
 	}, [])
 
-
+	// asks for permission to access the location when the page is loaded for the first time
 	useEffect(() => {
 		if (location[0] !== "" && location[1] !== ""){
 			fetchWeatherData(location[0], location[1]);
@@ -122,8 +127,8 @@ const Weather = () => {
 		<div className='weather-'>
 			<h2 className='cityName'>{cityName ? cityName : "loading.."}</h2>
 			<div className='weatherInfo'>
-				{weatherData.weather ? chooseEmoji(weatherData.weather[0].main) : "loading.."}
-				<h2 className='temp'>{weatherData.temp ? Math.round(weatherData.temp) + "°": "loading.."}</h2>
+				{weatherData.weather ? chooseIcon(weatherData.weather[0].main) : "loading.."}
+				<h2 className='temp'>{weatherData.temp ? Math.round(weatherData.temp) + "°": ""}</h2>
 				<div className='additionalInfo' align='left'>
 					<p className='addInfoText'>{weatherData.wind_speed ? "Wind Speed: " + " ".repeat(10) + weatherData.wind_speed + " km/h" : "loading.."}</p>
 					<p className='addInfoText'>{weatherData.humidity ? "Humidity:" + " ".repeat(16) + weatherData.humidity + " %" : "loading.."}</p>
