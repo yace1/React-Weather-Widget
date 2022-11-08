@@ -8,11 +8,11 @@ import { WiCloud, WiDaySunnyOvercast, WiDayRain, WiDaySnow, WiDaySprinkle, WiDay
 var apiKey = "00d3f9ed6f3768182fd4de446768c04c";
 
 function apiLocationUrl(city) {
-	return ("http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=" + apiKey);
+	return ("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=" + apiKey);
 }
 
 function apiWeatherUrl(latitude, longitude){
-	return ("http://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&exclude=minutely,hourly&units=metric&appid=" + apiKey);
+	return ("https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&exclude=minutely,hourly&units=metric&appid=" + apiKey);
 }
 	
 
