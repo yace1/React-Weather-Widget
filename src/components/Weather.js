@@ -1,11 +1,11 @@
 import React from 'react';
 import './Weather.css'
 import {useEffect} from 'react';
+import {apiKey, bigDataApiKey} from './key.js';
 import { WiCloud, WiDaySunnyOvercast, WiDayRain, WiDaySnow, WiDaySprinkle, WiDaySleetStorm} from "react-icons/wi";
 
 
 
-var apiKey = "00d3f9ed6f3768182fd4de446768c04c";
 
 function apiLocationUrl(city) {
 	return ("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=" + apiKey);
@@ -41,7 +41,7 @@ const Weather = () => {
 	}
 
 	async function FetchCityName(latitude, longitude){
-		const url = "https://api.bigdatacloud.net/data/reverse-geocode?latitude=" + latitude +  "&longitude=" + longitude +"&localityLanguage=en&key=bdc_02db12398d8d48b480bfad75f57e2ca7";
+		const url = "https://api.bigdatacloud.net/data/reverse-geocode?latitude=" + latitude +  "&longitude=" + longitude +"&localityLanguage=en&key=" + bigDataApiKey;
 		fetch(url)
 		.then((response) => {
 			if (!response.ok) {
